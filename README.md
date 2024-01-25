@@ -65,3 +65,11 @@ we have to take the original XPath in parenthesis
 
 #### TODO
 Try running it with JUnit (currently with TestNG)
+
+##### XPath functions
+text()
+contains()
+    //hr[contains(@class,'wp-block-separator has-css-opacity')]
+or if we use console:
+    $x("//button[contains(@id,'_btn')]")
+    $x("//p[contains(text(),'see')]")
