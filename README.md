@@ -73,3 +73,11 @@ contains()
 or if we use console:
     $x("//button[contains(@id,'_btn')]")
     $x("//p[contains(text(),'see')]")
+
+//tag[starts-with(@attribute, 'beginning')]  
+    $x("//input[starts-with(@class, 'input')]") 
+    //input[starts-with(@class, 'input')]
+
+//tag[starts-with(text(), 'beginning')]  
+    //p[starts-with(text(), 'Test case')]
+    $x("//p[starts-with(text(),'This page contains')]")
