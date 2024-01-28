@@ -81,3 +81,8 @@ or if we use console:
 //tag[starts-with(text(), 'beginning')]  
     //p[starts-with(text(), 'Test case')]
     $x("//p[starts-with(text(),'This page contains')]")
+
+//tag[not(@attribute='value')]
+    //tag[not(text()='value')]
+//tag[not(contains(@attribute,'partial value'))]
+    //tag[not(starts-with(text(),'beginning'))]
