@@ -1,5 +1,8 @@
 ### A training project to practice XPath locators with Selenium
 
+#### TODO
+Try running the code with JUnit (currently with TestNG)
+
 #### Notes, in no particular order:
 
 formula: //tag[@attribute='value']
@@ -63,9 +66,6 @@ we have to take the original XPath in parenthesis
 //tag1[index1]/tag2[index2]
 (//tag1[@attribute='value']/tag2)[index]
 
-#### TODO
-Try running it with JUnit (currently with TestNG)
-
 ##### XPath functions
 text()
 contains()
@@ -86,3 +86,16 @@ or if we use console:
     //tag[not(text()='value')]
 //tag[not(contains(@attribute,'partial value'))]
     //tag[not(starts-with(text(),'beginning'))]
+
+##### XPath Operators
+
+or  
+$x("//button[@name='Add' or @name='Remove']")
+$x("//button[@name='Add' or @id='remove_btn']")
+
+and  
+$x("//button[@class and @name='Save']")
+
+not  
+//button[@class='btn' and not(@style='display: none;')]
+//button[@class='btn'][not(@style='display: none;')]
