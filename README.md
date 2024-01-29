@@ -99,3 +99,8 @@ $x("//button[@class and @name='Save']")
 not  
 //button[@class='btn' and not(@style='display: none;')]
 //button[@class='btn'][not(@style='display: none;')]
+
+##### Wildcards
+
+$x("//*[@class]")
+$x("//button[@*='btn']")
