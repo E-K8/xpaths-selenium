@@ -102,5 +102,17 @@ not
 
 ##### Wildcards
 
-$x("//*[@class]")
+$x("//*[@class]")  
 $x("//button[@*='btn']")
+
+##### XPath Axes
+
+axisname::nodetag[predicate]  
+//div[@id='row1']/parent::div  
+
+[//]: # (not advisable↓)
+//section/ol[2]/li[2] - not advisable as list elements can be added later
+
+$x("//h5[contains(text(),'Test case 2')]/following-sibling::ol[1]/li[2]") - looks unnecessarily complicated, but is more robust
+
+//li[text()='Verify text saved']/parent::ol/preceding-sibling::h5[1] - will select the first closest element relative to our element
