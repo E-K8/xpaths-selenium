@@ -116,3 +116,10 @@ axisname::nodetag[predicate]
 $x("//h5[contains(text(),'Test case 2')]/following-sibling::ol[1]/li[2]") - looks unnecessarily complicated, but is more robust
 
 //li[text()='Verify text saved']/parent::ol/preceding-sibling::h5[1] - will select the first closest element relative to our element
+
+##### Locate relative elements
+//div[./input] = //input/parent::div
+
+//div/input = //input[parent::div] 
+//input[parent::div[@id='row2']] = //div[@id='row2']/input
+
