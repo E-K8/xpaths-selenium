@@ -123,7 +123,15 @@ $x("//h5[contains(text(),'Test case 2')]/following-sibling::ol[1]/li[2]") - look
 //div/input = //input[parent::div] 
 //input[parent::div[@id='row2']] = //div[@id='row2']/input
 
-##### Selecting several paths
+##### Selecting several elements
 $x("//h2 | //h5")
 
 $x("//div[@id='row1']/button | //div[@id='row1']/input")
+
+##### SVG
+Normal XPath syntax doesn't apply  
+//*[@y='11']  
+//*[name()='rect' and @y='11']  
+//*[name()='symbol' and @id='icon-amazon']/* - any child under the last element  or to be more specific:  
+//*[name()='symbol' and @id='icon-amazon']/*[name()='path']
+
