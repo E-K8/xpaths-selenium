@@ -135,3 +135,21 @@ Normal XPath syntax doesn't apply
 //*[name()='symbol' and @id='icon-amazon']/* - any child under the last element  or to be more specific:  
 //*[name()='symbol' and @id='icon-amazon']/*[name()='path']
 
+##### Inspect disappearing elements (stop page load)
+
+###### Method 1
+Open console  
+• Type in setTimeout(()=>{debugger;},5000);  
+• Press Enter  
+• We’ve got 5 seconds now to make out element appear. Once it appeared, wait until the debugger starts. We can use the element for as long as we don’t resume the debugger (for example, using element picker: square with an arrow)
+
+###### Method 2
+In DevTools:  
+• click on Sources tab  
+• locate Event Listener Breakpoints  
+• select the event, eg. Mouse->click (tick the box)  
+In the browser window:  
+• click the element that triggers desired action (it will be paused in debugger)  
+• step over the next function (F10) until you achieve visibility of the element  
+• select the element on the page to inspect it (arrow withing a square icon in DevTools or ctrl+shift+C)  
+• when you're done, untick the box in  Event Listener Breakpoints
