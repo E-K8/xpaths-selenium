@@ -1,7 +1,6 @@
 ### A training project to practice XPath locators with Selenium
 
-#### TODO
-Try running the code with JUnit (currently with TestNG)
+Expanded [XPath cheatsheet](https://devhints.io/xpath) 
 
 #### Notes, in no particular order:
 
